@@ -55,7 +55,7 @@ STRATO Kunden-Login > Domains > Domainverwaltung:
 Es kann bis zu 24 Stunden dauern, meist geht es in unter einer Stunde. Das SSL-Zertifikat stellt Vercel automatisch aus.
 
 ### 4. Postfach anlegen
-Im Impressum und in den Rechtstexten steht `hallo@mulligan-playgolf.com`. Dieses Postfach muss existieren und regelmäßig gelesen werden (Impressum, Datenschutzanfragen, DSA-Kontaktstelle, Meldungen aus der App). STRATO > E-Mail > Postfach anlegen.
+Im Impressum und in den Rechtstexten steht `contact@mulligan-playgolf.com`. Dieses Postfach muss existieren und regelmäßig gelesen werden (Impressum, Datenschutzanfragen, DSA-Kontaktstelle, Meldungen aus der App). STRATO > E-Mail > Postfach anlegen.
 
 ### 5. Prüfen
 - `https://mulligan-playgolf.com`, `/en`, `/impressum`, `/datenschutz`, `/agb` laden

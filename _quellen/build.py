@@ -11,7 +11,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SITE = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(HERE)
 LEGAL_DIR = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "rechtstexte")
 DOMAIN = "https://mulligan-playgolf.com"
-MAIL = "hallo@mulligan-playgolf.com"
+MAIL = "contact@mulligan-playgolf.com"
 OWNER = "Becker &amp; Groß GbR"
 YEAR = "2026"
 
