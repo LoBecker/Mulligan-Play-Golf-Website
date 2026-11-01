@@ -1,6 +1,6 @@
 # Website mulligan-playgolf.com
 
-Statische Coming-Soon-Seite für Mulligan. Kein Framework, kein Build-Schritt, kein JavaScript, keine Cookies, kein Tracking, Schriften selbst gehostet. Gehostet bei Vercel, Domain und Postfach bei STRATO.
+Statische Coming-Soon-Seite für Mulligan. Wissen zu Inhalt, Texten, QR-Codes und offenen Punkten steht in `HANDOVER.md`. Kein Framework, kein Build-Schritt, kein JavaScript, keine Cookies, kein Tracking, Schriften selbst gehostet. Gehostet bei Vercel, Domain und Postfach bei STRATO.
 
 ## Was wo liegt
 | Pfad | Inhalt | URL |
