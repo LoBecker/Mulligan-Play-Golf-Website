@@ -12,6 +12,8 @@ SITE = sys.argv[1] if len(sys.argv) > 1 else os.path.dirname(HERE)
 LEGAL_DIR = sys.argv[2] if len(sys.argv) > 2 else os.path.join(HERE, "rechtstexte")
 DOMAIN = "https://mulligan-playgolf.com"
 MAIL = "contact@mulligan-playgolf.com"
+INSTAGRAM = "https://www.instagram.com/mulligan_playgolf/"
+INSTAGRAM_NAME = "@mulligan_playgolf"
 OWNER = "Becker &amp; Groß GbR"
 YEAR = "2026"
 
@@ -31,16 +33,16 @@ T = {
         "other_home": "/en",
         "switch_label": "EN",
         "switch_aria": "English version",
-        "title": "Mulligan · Social Golf Club Düsseldorf",
-        "desc": "Mulligan ist der Social Golf Club aus Düsseldorf: 9-Loch-Matches gegen Leute auf deinem Niveau, ein Rating, das sich nach jeder Runde bewegt, neue Leute im Flight und Events. Kostenlos, bald im App Store.",
+        "title": "Mulligan · Golf-App für Matches, Netzwerk und Statistik",
+        "desc": "Mulligan ist die Golf-App für Matchmaking, Netzwerk und Statistik: 9-Loch-Matches gegen Leute auf deinem Niveau, ein Rating, das sich nach jeder Runde bewegt, deine Statistik je Loch und alle Golfclubs in Deutschland. Kostenlos, bald im App Store.",
         "skip": "Zum Inhalt springen",
         "logo_alt": "Mulligan, zur Startseite",
         "legal": {"impressum": ("/impressum", "Impressum"), "datenschutz": ("/datenschutz", "Datenschutz"), "agb": ("/agb", "AGB")},
         "foot_other": ("/en", "English"),
-        "foot_brand": "Mulligan · Social Golf Club Düsseldorf",
+        "foot_brand": "Mulligan · Play Golf",
         "kicker": "Bald im App Store",
         "h1": "Spiel um Punkte.<br>Lern Leute kennen.<br><em>Steig im Rang auf.</em>",
-        "lead": "Mulligan macht aus jeder Runde ein Match. Du spielst 9 Loch gegen Leute auf deinem Niveau, dein Rating bewegt sich nach jeder Runde, und im Flight lernst du neue Leute kennen. Ohne Startgeld, kostenlos in der App.",
+        "lead": "Mulligan macht aus jeder Runde ein Match. Du findest Mitspieler auf deinem Niveau, spielst 9 Loch und trägst deine Karte je Loch ein. Danach siehst du, wie sich Rating und Statistik entwickeln. Auf allen Golfplätzen in Deutschland, kostenlos in der App.",
         "get_title": "Bald im App Store",
         "get_text": "Scan den Code mit deinem iPhone. Sobald die App erscheint, führt er direkt dorthin. Für iPhone, kostenlos.",
         "qr_alt": "QR-Code: führt zum Start der App in den App Store, bis dahin auf diese Seite",
@@ -54,18 +56,18 @@ T = {
         "app_p": "Jedes Match ist eine 9-Loch-Runde mit zwei bis vier Leuten. Die Startzeit beim Club bucht, wer das Match eröffnet. Das Greenfee zahlt jeder vor Ort.",
         "steps": [
             ("01", "Finden", "Match finden oder eröffnen", "Offene Matches in deiner Nähe, mit Club, Uhrzeit und Spielmodus. Du siehst vorher, wer mitspielt und auf welchem Niveau. Oder du eröffnest selbst und lädst Freunde ein."),
-            ("02", "Spielen", "Ergebnis eintragen", "Nach der Runde trägt jeder seine Schläge ein, ein Mitspieler bestätigt. Treffpunkt und Anfahrt klärt ihr vorher im Flight-Chat."),
+            ("02", "Spielen", "Karte eintragen", "Nach der Runde trägst du deine Schläge je Loch ein, ein Mitspieler bestätigt. Treffpunkt und Anfahrt klärt ihr vorher im Flight-Chat."),
             ("03", "Aufsteigen", "Rating und Rang", "Wer gewinnt, bekommt Punkte, gegen Stärkere mehr. So landest du bei den nächsten Matches bei Leuten, die zu dir passen."),
-            ("04", "Vernetzen", "Freunde, Clubs und Events", "Folge Leuten aus deinem Flight, gib Applaus für gute Runden und entdecke Clubs, Rangeabende und Events in deiner Umgebung."),
+            ("04", "Vernetzen", "Freunde, Clubs und Events", "Folge Leuten aus deinem Flight, schreib ihnen direkt, gib Applaus für gute Runden und entdecke Clubs und Events in deiner Umgebung."),
         ],
         "soon": "In Vorbereitung: Trainerstunden buchen und der Mulligan Shop.",
         "why_kicker": "Warum Mulligan",
-        "why_h2": "Ein Club ohne Clubhaus. <em>Dafür mit Rivalen.</em>",
+        "why_h2": "Matches, Leute, Zahlen. <em>Alles in einer App.</em>",
         "why": [
-            ("bolt", "Jede Runde zählt", "Dein Mulligan Rating ändert sich nach jeder gewerteten Runde. Es zählt, wen du schlägst, nicht um wie viele Schläge. Du musst nicht aufs nächste Turnier warten, um zu sehen, ob du besser wirst."),
+            ("bolt", "Jede Runde zählt", "Dein Mulligan Rating ändert sich nach jeder gewerteten Runde. Es zählt, wen du schlägst, nicht um wie viele Schläge. Etwa fünf Siege gegen Gleichstarke bringen dich einen Rang weiter, von Rookie bis Albatros."),
             ("trophy", "Wettkampf ohne Startgeld", "Jeder gegen jeden oder 2 gegen 2, die Ergebnisse bestätigt der Flight. Die App kostet nichts. Du zahlst nur dein Greenfee vor Ort."),
             ("people", "Neue Leute auf deinem Level", "In jedem Flight triffst du Leute, die so spielen wie du. Dazu Rangeabende und Events, bei denen aus Mitspielern Freunde werden. Oder mehr."),
-            ("chart", "Zeig, was du draufhast", "Dein Profil zeigt Rang, Rating, Bestmarke und Meilensteine. Etwa fünf Siege gegen Gleichstarke bringen dich einen Rang weiter, von Rookie bis Albatros."),
+            ("chart", "Deine Statistik", "Schläge je Loch, Putts und Fairways, dein Schnitt der letzten zehn Runden und deine längste Serie mit Par oder besser. In den Bestenlisten vergleichst du dich mit Freunden, deinem Bundesland und ganz Deutschland."),
         ],
         "demo_label": "Beispiele aus der App",
         "match": {"time": "09:40", "date": "Sa 24. Okt", "place": "Neuss", "mode": "2 gegen 2", "avg": "Ø 1.175", "rank": "Bogey", "free": "2 frei", "aria": "Match in Neuss am Samstag, 24. Oktober, 09:40 Uhr, 2 gegen 2, zwei Plätze frei"},
@@ -73,11 +75,14 @@ T = {
         "chat_aria": "Flight-Chat",
         "rating": {"label": "Mulligan Rating", "num": "1.160", "delta": "+20", "rank": "Bogey", "note": "Noch 40 Punkte bis Par"},
         "cta_kicker": "Mitmachen",
-        "cta_h2": "Wir starten in <em>Düsseldorf.</em>",
-        "cta_p": "Mulligan erscheint bald für iPhone. Du betreibst einen Golfclub oder eine Indoor-Anlage, gibst Trainerstunden oder willst dein Produkt zeigen? Dann werde Partner und mach mit uns Events.",
+        "cta_h2": "Wir starten in <em>ganz Deutschland.</em>",
+        "cta_p": "Mulligan erscheint bald für iPhone, mit allen Golfclubs in Deutschland. Du betreibst einen Golfclub oder eine Indoor-Anlage, gibst Trainerstunden oder willst dein Produkt zeigen? Dann werde Partner und mach mit uns Events.",
         "back": "Zur Startseite",
         "nav_partner": ("/partner", "Partner werden"),
         "cta_button": "Partner werden",
+        "insta_title": "Folge uns auf Instagram",
+        "insta_text": "Neuigkeiten, Matches und Events.",
+        "insta_alt": "QR-Code zum Instagram-Profil mulligan_playgolf",
         "stand": "Stand: Oktober 2026",
         "toc": "Inhalt",
         "nf_title": "Seite nicht gefunden · Mulligan",
@@ -91,16 +96,16 @@ T = {
         "other_home": "/",
         "switch_label": "DE",
         "switch_aria": "Deutsche Version",
-        "title": "Mulligan · Social Golf Club Düsseldorf",
-        "desc": "Mulligan is the social golf club from Düsseldorf: 9-hole matches against people at your level, a rating that moves after every round, new people in every flight and events. Free, coming soon to the App Store.",
+        "title": "Mulligan · The golf app for matches, people and stats",
+        "desc": "Mulligan is the golf app for matchmaking, networking and stats: 9-hole matches against people at your level, a rating that moves after every round, your stats hole by hole and every golf club in Germany. Free, coming soon to the App Store.",
         "skip": "Skip to content",
         "logo_alt": "Mulligan, back to home",
         "legal": {"impressum": ("/en/imprint", "Imprint"), "datenschutz": ("/en/privacy", "Privacy"), "agb": ("/en/terms", "Terms")},
         "foot_other": ("/", "Deutsch"),
-        "foot_brand": "Mulligan · Social Golf Club Düsseldorf",
+        "foot_brand": "Mulligan · Play Golf",
         "kicker": "Coming soon to the App Store",
         "h1": "Play for points.<br>Meet new people.<br><em>Climb the ranks.</em>",
-        "lead": "Mulligan turns every round into a match. You play 9 holes against people at your level, your rating moves after every round, and you meet new people in every flight. No entry fee, free in the app.",
+        "lead": "Mulligan turns every round into a match. You find players at your level, play 9 holes and enter your card hole by hole. Then you see how your rating and stats develop. On every golf course in Germany, free in the app.",
         "get_title": "Coming soon to the App Store",
         "get_text": "Scan the code with your iPhone. Once the app is out, it takes you straight there. For iPhone, free.",
         "qr_alt": "QR code: leads to the app in the App Store once it launches, to this page until then",
@@ -114,18 +119,18 @@ T = {
         "app_p": "Every match is a 9-hole round for two to four players. Whoever opens the match books the tee time with the club. Everyone pays their green fee on site.",
         "steps": [
             ("01", "Find", "Find or open a match", "Open matches nearby with club, tee time and game mode. You see who's playing and at what level before you join. Or open one yourself and invite friends."),
-            ("02", "Play", "Enter your score", "After the round, everyone enters their strokes and another player confirms them. Where to meet and who's driving gets sorted in the flight chat beforehand."),
+            ("02", "Play", "Enter your card", "After the round, you enter your strokes hole by hole and another player confirms them. Where to meet and who's driving gets sorted in the flight chat beforehand."),
             ("03", "Climb", "Rating and rank", "Win and you gain points, more against stronger players. That way your next matches put you with people who fit your game."),
-            ("04", "Connect", "Friends, clubs and events", "Follow people from your flight, give applause for good rounds and discover clubs, range nights and events near you."),
+            ("04", "Connect", "Friends, clubs and events", "Follow people from your flight, message them directly, give applause for good rounds and discover clubs and events near you."),
         ],
         "soon": "In the works: booking lessons and the Mulligan shop.",
         "why_kicker": "Why Mulligan",
-        "why_h2": "A club without a clubhouse. <em>But with rivals.</em>",
+        "why_h2": "Matches, people, numbers. <em>All in one app.</em>",
         "why": [
-            ("bolt", "Every round counts", "Your Mulligan Rating changes after every scored round. What counts is who you beat, not by how many strokes. No waiting for the next tournament to see if you're getting better."),
+            ("bolt", "Every round counts", "Your Mulligan Rating changes after every scored round. What counts is who you beat, not by how many strokes. About five wins against equally strong players move you up a rank, from Rookie to Albatross."),
             ("trophy", "Competition without entry fees", "Everyone vs everyone or 2 vs 2, with scores confirmed by the flight. The app is free. You only pay your green fee on site."),
             ("people", "New people at your level", "Every flight brings people who play like you. Plus range nights and events where playing partners become friends. Or more."),
-            ("chart", "Show what you've got", "Your profile shows your rank, rating, personal best and milestones. About five wins against equally strong players move you up a rank, from Rookie to Albatross."),
+            ("chart", "Your stats", "Strokes per hole, putts and fairways, your average over the last ten rounds and your longest streak of par or better. Leaderboards compare you with friends, your state and all of Germany."),
         ],
         "demo_label": "Examples from the app",
         "match": {"time": "09:40", "date": "Sat 24 Oct", "place": "Neuss", "mode": "2 vs 2", "avg": "avg 1,175", "rank": "Bogey", "free": "2 open", "aria": "Match in Neuss on Saturday 24 October at 09:40, 2 vs 2, two open spots"},
@@ -133,11 +138,14 @@ T = {
         "chat_aria": "Flight chat",
         "rating": {"label": "Mulligan Rating", "num": "1,160", "delta": "+20", "rank": "Bogey", "note": "40 points to Par"},
         "cta_kicker": "Get involved",
-        "cta_h2": "We're starting in <em>Düsseldorf.</em>",
-        "cta_p": "Mulligan is coming soon for iPhone. Do you run a golf club or an indoor facility, give lessons or want to show your product? Become a partner and host events with us.",
+        "cta_h2": "We're starting <em>all over Germany.</em>",
+        "cta_p": "Mulligan is coming soon for iPhone, with every golf club in Germany. Do you run a golf club or an indoor facility, give lessons or want to show your product? Become a partner and host events with us.",
         "back": "Back to home",
         "nav_partner": ("/en/partner", "Become a partner"),
         "cta_button": "Become a partner",
+        "insta_title": "Follow us on Instagram",
+        "insta_text": "News, matches and events.",
+        "insta_alt": "QR code for the Instagram profile mulligan_playgolf",
         "stand": "Last updated: October 2026",
         "toc": "Contents",
         "nf_title": "Page not found · Mulligan",
@@ -160,18 +168,18 @@ PARTNER_SUBJECT = {"de": "Partneranfrage%20Mulligan", "en": "Partner%20request%2
 P = {
     "de": {
         "title": "Partner werden · Mulligan",
-        "desc": "Partner von Mulligan werden: Events in der App erstellen, den eigenen Club sichtbar machen und Produkte bei jungen Golferinnen und Golfern in Düsseldorf zeigen.",
+        "desc": "Partner von Mulligan werden: Events in der App erstellen, den eigenen Club sichtbar machen und Produkte bei Golferinnen und Golfern in ganz Deutschland zeigen.",
         "kicker": "Partner werden",
         "h1": "Zeigt euch dort, wo <em>Flights entstehen.</em>",
-        "lead": "Mulligan bringt Golferinnen und Golfer in Düsseldorf und Umgebung zusammen, die öfter spielen wollen und gegen Leute auf ihrem Niveau antreten. Als Partner macht ihr mit uns Events, zeigt euren Club oder stellt euer Produkt dort vor, wo die nächste Runde geplant wird.",
+        "lead": "Mulligan bringt Golferinnen und Golfer in ganz Deutschland zusammen, die öfter spielen wollen und gegen Leute auf ihrem Niveau antreten. Als Partner macht ihr mit uns Events, zeigt euren Club oder stellt euer Produkt dort vor, wo die nächste Runde geplant wird.",
         "button": "Partneranfrage senden",
         "alt_mail": "Oder direkt an",
         "demo_label": "Beispiele, wie Partner in der App erscheinen",
         "caption": "Beispielansicht",
-        "event": {"kicker": "Event", "title": "Rangeabend", "when": "Freitag · 19:00", "where": "Driving Range, Düsseldorf", "desc": "Bälle und Bier inklusive. Bring jemanden mit.", "going": "+28 Zusagen", "sponsor": "Gesponsert von eurer Marke", "button": "Zusagen"},
+        "event": {"kicker": "Event", "title": "Rangeabend", "when": "Freitag · 19:00", "where": "Driving Range bei euch", "desc": "Bälle und Bier inklusive. Bring jemanden mit.", "going": "+28 Zusagen", "sponsor": "Gesponsert von eurer Marke", "button": "Zusagen"},
         "club": {"name": "Euer Club", "new": "Neu", "news": "Schnupperabend für Neue am Donnerstag", "matches": "4 offene Matches"},
         "who_kicker": "Für wen",
-        "who_h2": "Für alle, die Golf <em>in Düsseldorf machen.</em>",
+        "who_h2": "Für alle, die Golf <em>möglich machen.</em>",
         "who": [
             ("Golfclubs und Anlagen", "Rangeabende, Schnuppertage und offene Turniere bei euch. Spielerinnen und Spieler sehen in der App eure News und die offenen Matches an eurem Platz."),
             ("Indoor und Simulatoren", "Simulator-Abende, Wintertermine und Turniere unter dem Dach. So bleibt eure Anlage auch in der Saisonpause im Gespräch."),
@@ -181,7 +189,7 @@ P = {
         "get_kicker": "Was ihr bekommt",
         "get_h2": "Euer Event in der App. <em>Eure Leute am Platz.</em>",
         "get": [
-            ("flag", "Events, die gesehen werden", "Wir legen euer Event in der App an, mit Titel, Ort, Zeit, Plätzen, Beschreibung und Bild. Es steht in der Eventliste, erscheint als Karte im Feed und am Tag selbst in der Match-Suche. Zusagen geht mit einem Tipp. Zum Start ist das Zusagen kostenlos, Tickets über die App folgen."),
+            ("flag", "Events, die gesehen werden", "Wir legen euer Event in der App an, mit Titel, Ort, Zeit, Plätzen, Beschreibung und Bild. Es steht in der Eventliste, erscheint als Karte im Feed und am Tag selbst in der Match-Suche. Zusagen und Tickets über die App folgen."),
             ("people", "Sichtbarkeit für euren Club", "Partnerclubs bekommen in der App eine eigene Beschreibung, Bilder und News. Wer euren Club als Favorit markiert, sieht eure neueste News direkt auf der Startseite."),
             ("trophy", "Klar gekennzeichnet, ohne Datenhandel", "Gesponserte Events tragen den Hinweis \"Gesponsert von\" mit eurem Namen. Personenbezogene Daten der Nutzer geben wir nicht an Partner weiter. Nach dem Event bekommt ihr anonyme Zahlen, zum Beispiel wie viele zugesagt haben."),
         ],
@@ -193,23 +201,23 @@ P = {
             ("03", "Live", "Ab in die App", "Wir legen Event oder Clubprofil an und stimmen alles vorher mit euch ab."),
         ],
         "end_kicker": "Partner werden",
-        "end_h2": "Wir starten in <em>Düsseldorf.</em>",
-        "end_p": "Die ersten Partner prägen, wie Mulligan in Düsseldorf und Umgebung startet. Schreibt uns, wir melden uns persönlich.",
+        "end_h2": "Wir starten in <em>ganz Deutschland.</em>",
+        "end_p": "Die ersten Partner prägen, wie Mulligan startet. Schreibt uns, wir melden uns persönlich.",
     },
     "en": {
         "title": "Become a partner · Mulligan",
-        "desc": "Become a Mulligan partner: create events in the app, make your club visible and show your products to young golfers in Düsseldorf.",
+        "desc": "Become a Mulligan partner: create events in the app, make your club visible and show your products to golfers all over Germany.",
         "kicker": "Become a partner",
         "h1": "Show up where <em>flights come together.</em>",
-        "lead": "Mulligan brings together golfers in and around Düsseldorf who want to play more and compete against people at their level. As a partner, you host events with us, show off your club or present your product where the next round gets planned.",
+        "lead": "Mulligan brings together golfers all over Germany who want to play more and compete against people at their level. As a partner, you host events with us, show off your club or present your product where the next round gets planned.",
         "button": "Send a partner request",
         "alt_mail": "Or write directly to",
         "demo_label": "Examples of how partners appear in the app",
         "caption": "Sample view",
-        "event": {"kicker": "Event", "title": "Range night", "when": "Friday · 19:00", "where": "Driving range, Düsseldorf", "desc": "Balls and beer included. Bring someone along.", "going": "+28 going", "sponsor": "Sponsored by your brand", "button": "Join"},
+        "event": {"kicker": "Event", "title": "Range night", "when": "Friday · 19:00", "where": "Your driving range", "desc": "Balls and beer included. Bring someone along.", "going": "+28 going", "sponsor": "Sponsored by your brand", "button": "Join"},
         "club": {"name": "Your club", "new": "New", "news": "Taster evening for newcomers on Thursday", "matches": "4 open matches"},
         "who_kicker": "Who it's for",
-        "who_h2": "For everyone who makes golf <em>happen in Düsseldorf.</em>",
+        "who_h2": "For everyone who makes golf <em>happen.</em>",
         "who": [
             ("Golf clubs and courses", "Range nights, taster days and open tournaments at your place. Players see your news and the open matches at your course in the app."),
             ("Indoor and simulators", "Simulator nights, winter dates and indoor tournaments. That keeps your facility on people's minds in the off-season too."),
@@ -219,7 +227,7 @@ P = {
         "get_kicker": "What you get",
         "get_h2": "Your event in the app. <em>Your people on the course.</em>",
         "get": [
-            ("flag", "Events people see", "We create your event in the app with title, place, time, spots, description and image. It appears in the events list, as a card in the feed and on the day itself in the match search. Joining takes one tap. At launch, joining is free, tickets in the app will follow."),
+            ("flag", "Events people see", "We create your event in the app with title, place, time, spots, description and image. It appears in the events list, as a card in the feed and on the day itself in the match search. Joining and tickets in the app will follow."),
             ("people", "Visibility for your club", "Partner clubs get their own description, images and news in the app. Anyone who marks your club as a favourite sees your latest news right on the home screen."),
             ("trophy", "Clearly labelled, no data trading", "Sponsored events carry the note \"Sponsored by\" with your name. We do not pass on users' personal data to partners. After the event you get anonymous numbers, for example how many people joined."),
         ],
@@ -231,8 +239,8 @@ P = {
             ("03", "Live", "Into the app", "We create the event or club profile and agree everything with you beforehand."),
         ],
         "end_kicker": "Become a partner",
-        "end_h2": "We're starting in <em>Düsseldorf.</em>",
-        "end_p": "The first partners shape how Mulligan launches in and around Düsseldorf. Write to us and we'll get back to you personally.",
+        "end_h2": "We're starting <em>all over Germany.</em>",
+        "end_p": "The first partners shape how Mulligan launches. Write to us and we'll get back to you personally.",
     },
 }
 
@@ -294,11 +302,13 @@ def header(t, key):
 def footer(t, current=None):
     links = []
     ph, pl = t["nav_partner"]
-    links.append(f'<li><a href="{ph}"{' aria-current="page"' if current == 'partner' else ''}>{pl}</a></li>')
+    current_attr = ' aria-current="page"' if current == 'partner' else ''
+    links.append(f'<li><a href="{ph}"{current_attr}>{pl}</a></li>')
     for k in ("impressum", "datenschutz", "agb"):
         href, label = t["legal"][k]
         cur = ' aria-current="page"' if current == k else ""
         links.append(f'<li><a href="{href}"{cur}>{label}</a></li>')
+    links.append(f'<li><a href="{INSTAGRAM}" rel="noopener">Instagram</a></li>')
     oh, ol = t["foot_other"]
     links.append(f'<li><a href="{oh}" lang="{"en" if t["lang"] == "de" else "de"}">{ol}</a></li>')
     return f"""<footer class="site-footer">
@@ -407,6 +417,10 @@ def home(t):
       <p>{t['cta_p']}</p>
     </div>
     <a class="mail" href="{t['nav_partner'][0]}">{t['cta_button']}</a>
+    <div class="insta">
+      <img src="/assets/img/qr-instagram.png" alt="{t['insta_alt']}" width="132" height="152" loading="lazy">
+      <div><strong>{t['insta_title']}</strong><p>{t['insta_text']}</p><a href="{INSTAGRAM}" rel="noopener">{INSTAGRAM_NAME}</a></div>
+    </div>
   </div>
 </section>
 </main>
