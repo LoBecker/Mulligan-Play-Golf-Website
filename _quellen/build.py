@@ -128,7 +128,7 @@ T = {
         "why_h2": "Matches, people, numbers. <em>All in one app.</em>",
         "why": [
             ("bolt", "Every round counts", "Your Mulligan Rating changes after every scored round. What counts is who you beat, not by how many strokes. About five wins against equally strong players move you up a rank, from Rookie to Albatross."),
-            ("trophy", "Competition without entry fees", "Everyone vs everyone or 2 vs 2, with scores confirmed by the flight. The app is free. You only pay your green fee on site."),
+            ("trophy", "Competition without entry fees", "All vs all or 2 vs 2, with scores confirmed by the flight. The app is free. You only pay your green fee on site."),
             ("people", "New people at your level", "Every flight brings people who play like you. Plus range nights and events where playing partners become friends. Or more."),
             ("chart", "Your stats", "Strokes per hole, putts and fairways, your average over the last ten rounds and your longest streak of par or better. Leaderboards compare you with friends, your state and all of Germany."),
         ],
@@ -428,7 +428,8 @@ def home(t):
     return head(t, t["title"], t["desc"], t["home"], "home") + header(t, "home") + body + footer(t)
 
 
-def legal_page(t, key, h1, frag_file, path, title_suffix, toc=True):
+def legal_page(t, key, h1, frag_file, path, title_suffix, toc=True, stand=None):
+    # stand: eigener Stand je Rechtstext, sonst der gemeinsame aus T
     src = os.path.join(LEGAL_DIR, frag_file)
     if not os.path.exists(src):
         print("fehlt:", src)
@@ -448,7 +449,7 @@ def legal_page(t, key, h1, frag_file, path, title_suffix, toc=True):
   <div class="wrap">
     <a class="back" href="{t['home']}">← {t['back']}</a>
     <h1>{h1}</h1>
-    <p class="stand">{t['stand']}</p>
+    <p class="stand">{stand or t['stand']}</p>
     {toc_html}
     <div class="prose">
 {frag}
@@ -584,10 +585,12 @@ de, en = T["de"], T["en"]
 write("index.html", home(de))
 write("en/index.html", home(en))
 write("impressum.html", legal_page(de, "impressum", "Impressum", "impressum.html", "/impressum", "", toc=False))
-write("datenschutz.html", legal_page(de, "datenschutz", "Datenschutzerklärung", "datenschutz.html", "/datenschutz", ""))
+write("datenschutz.html", legal_page(de, "datenschutz", "Datenschutzerklärung", "datenschutz.html", "/datenschutz", "",
+                                      stand="Stand: November 2026"))
 write("agb.html", legal_page(de, "agb", "Allgemeine Geschäftsbedingungen", "agb.html", "/agb", ""))
 write("en/imprint.html", legal_page(en, "impressum", "Imprint", "impressum.html", "/en/imprint", "", toc=False))
-write("en/privacy.html", legal_page(en, "datenschutz", "Privacy Policy", "privacy-en.html", "/en/privacy", ""))
+write("en/privacy.html", legal_page(en, "datenschutz", "Privacy Policy", "privacy-en.html", "/en/privacy", "",
+                                     stand="Last updated: November 2026"))
 write("en/terms.html", legal_page(en, "agb", "Terms of Use", "terms-en.html", "/en/terms", ""))
 write("partner.html", partner(de, "de"))
 write("en/partner.html", partner(en, "en"))
