@@ -83,7 +83,7 @@ T = {
         "insta_title": "Folge uns auf Instagram",
         "insta_text": "Neuigkeiten, Matches und Events.",
         "insta_alt": "QR-Code zum Instagram-Profil mulligan_playgolf",
-        "stand": "Stand: Oktober 2026",
+        "stand": "Stand: November 2026",
         "toc": "Inhalt",
         "nf_title": "Seite nicht gefunden · Mulligan",
         "nf_h1": "Diese Seite gibt es nicht.",
@@ -146,7 +146,7 @@ T = {
         "insta_title": "Follow us on Instagram",
         "insta_text": "News, matches and events.",
         "insta_alt": "QR code for the Instagram profile mulligan_playgolf",
-        "stand": "Last updated: October 2026",
+        "stand": "Last updated: November 2026",
         "toc": "Contents",
         "nf_title": "Page not found · Mulligan",
         "nf_h1": "This page doesn't exist.",
@@ -587,11 +587,13 @@ write("en/index.html", home(en))
 write("impressum.html", legal_page(de, "impressum", "Impressum", "impressum.html", "/impressum", "", toc=False))
 write("datenschutz.html", legal_page(de, "datenschutz", "Datenschutzerklärung", "datenschutz.html", "/datenschutz", "",
                                       stand="Stand: November 2026"))
-write("agb.html", legal_page(de, "agb", "Allgemeine Geschäftsbedingungen", "agb.html", "/agb", ""))
+write("agb.html", legal_page(de, "agb", "Allgemeine Geschäftsbedingungen", "agb.html", "/agb", "",
+                              stand="Fassung 1.0 vom 8. November 2026"))
 write("en/imprint.html", legal_page(en, "impressum", "Imprint", "impressum.html", "/en/imprint", "", toc=False))
 write("en/privacy.html", legal_page(en, "datenschutz", "Privacy Policy", "privacy-en.html", "/en/privacy", "",
                                      stand="Last updated: November 2026"))
-write("en/terms.html", legal_page(en, "agb", "Terms of Use", "terms-en.html", "/en/terms", ""))
+write("en/terms.html", legal_page(en, "agb", "Terms of Use", "terms-en.html", "/en/terms", "",
+                                   stand="Version 1.0 of 8 November 2026"))
 write("partner.html", partner(de, "de"))
 write("en/partner.html", partner(en, "en"))
 write("404.html", notfound(de))
