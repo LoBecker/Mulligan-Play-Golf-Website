@@ -2,7 +2,7 @@
 
 Alles, was man braucht, um an der Website weiterzuarbeiten, ohne das App-Repo lesen zu müssen. Technische Einrichtung (Vercel, DNS, Postfach) steht in `README.md`.
 
-Stand: 1.11.2026
+Stand: 7.11.2026
 
 ## Worum es geht
 - Coming-Soon-Seite für die iOS App **Mulligan: Play Golf** (Name im App Store, auf dem Homescreen "Mulligan").
@@ -61,9 +61,12 @@ Auf dem Handy blendet die Seite die QR-Codes aus und zeigt nur Links.
 - [ ] Zum Launch: Ziel von `/app` in `vercel.json` auf den App-Store-Link stellen, "Bald im App Store" in `_quellen/build.py` ändern und das Smart App Banner in beide Startseiten setzen (siehe `README.md`).
 - [ ] Vercel-Tarif klären: Hobby ist nur für nicht kommerzielle Nutzung, sauber wäre Pro (siehe `README.md`).
 - [ ] Zugang zu Vercel für David. Im Hobby-Tarif nicht möglich, im Pro-Tarif über ein Team.
-- [ ] Datenschutzerklärung ergänzen, sobald das eigene SMTP (Resend) für Anmeldecodes läuft.
+- [x] Datenschutzerklärung ergänzen, sobald das eigene SMTP (Resend) für Anmeldecodes läuft (7.11.2026).
+- [ ] Zum Launch: "Hinweis zur Testphase" oben in `_quellen/rechtstexte/datenschutz.html` und `privacy-en.html` entfernen, sobald Löschjobs, Inaktivität, Meldungs-Mail und Moderationsprotokoll (Paket 3 im App-Repo) laufen. Ebenso die Abschnitte zu Testprofilen (DS `#app-berichte`, AGB § 7 `#testprofile`) prüfen.
+- [ ] Neue AGB-Fassung: Nummer und Datum in `_quellen/build.py` (`stand=` bei `agb.html` und `en/terms.html`) und in § 3 Abs. 3 ändern, gleichzeitig `private.current_terms_version()` und `LegalVersion.terms` in der App.
 - [ ] Geplante Wortmarke: In `docs/recht/checkliste-gbr.md` im App-Repo steht "Mulligan: Play Golf". Die Markenrecherche steht noch aus.
 
 ## Verlauf
 - 24.10.2026: Seite angelegt, Rechtstexte auf die Becker & Groß GbR umgestellt, Kontakt `contact@mulligan-playgolf.com` (Louis).
+- 7.11.2026: Rechtstexte für den Launch an die App angeglichen (Prüfbericht vom 7.11.2026, PR `rechtstexte-launch`, übernimmt PR #6): Name nach außen nur mit Initial, Pflichtangaben, Statistik und Bestenlisten, Push und Glocke mit Fristen, Resend in Irland, Code eine Stunde, Wortliste, Meldungen, Feedback, Testumgebung, Hinweis zur Testphase, AGB als Fassung 1.0 mit Anhörung, § 327r BGB, Kündigung nur mit sachlichem Grund, Impressum mit § 5 DDG. Braucht nach Gesellschaftsvertrag § 7 Abs. 3 f die Zustimmung beider Gesellschafter.
 - 1.11.2026: Texte auf die neue Positionierung umgestellt, Datenschutz zu Standort und Feed nachgezogen, Instagram mit QR-Code und Fußzeilen-Link ergänzt, `build.py` lauffähig mit Python 3.9 (David, aus PR #9 im App-Repo übernommen).
