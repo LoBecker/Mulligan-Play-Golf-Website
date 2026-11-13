@@ -588,12 +588,12 @@ write("impressum.html", legal_page(de, "impressum", "Impressum", "impressum.html
 write("datenschutz.html", legal_page(de, "datenschutz", "Datenschutzerklärung", "datenschutz.html", "/datenschutz", "",
                                       stand="Stand: 10. November 2026"))
 write("agb.html", legal_page(de, "agb", "Allgemeine Geschäftsbedingungen", "agb.html", "/agb", "",
-                              stand="Fassung 1.0 vom 8. November 2026"))
+                              stand="Fassung 1.1 vom 13. November 2026"))
 write("en/imprint.html", legal_page(en, "impressum", "Imprint", "impressum.html", "/en/imprint", "", toc=False))
 write("en/privacy.html", legal_page(en, "datenschutz", "Privacy Policy", "privacy-en.html", "/en/privacy", "",
                                      stand="Last updated: 10 November 2026"))
 write("en/terms.html", legal_page(en, "agb", "Terms of Use", "terms-en.html", "/en/terms", "",
-                                   stand="Version 1.0 of 8 November 2026"))
+                                   stand="Version 1.1 of 13 November 2026"))
 write("partner.html", partner(de, "de"))
 write("en/partner.html", partner(en, "en"))
 write("404.html", notfound(de))

@@ -67,6 +67,7 @@ Auf dem Handy blendet die Seite die QR-Codes aus und zeigt nur Links.
 - [ ] Geplante Wortmarke: In `docs/recht/checkliste-gbr.md` im App-Repo steht "Mulligan: Play Golf". Die Markenrecherche steht noch aus.
 
 ## Verlauf
+- 13.11.2026: Prüfung neuer Fotos vor dem Veröffentlichen (App Store Richtlinie 1.2, Entscheidung der Gründer): Datenschutz `#app-fotopruefung` mit Zweck, Rechtsgrundlagen und Fristen, Resend auch für den Hinweis auf wartende Fotos, ersetzte Fotos spätestens am nächsten Tag gelöscht. AGB § 8 Abs. 4 und § 11 Werkzeuge. AGB-Fassung bleibt 1.0, Entscheidung der Gründer offen.
 - 24.10.2026: Seite angelegt, Rechtstexte auf die Becker & Groß GbR umgestellt, Kontakt `contact@mulligan-playgolf.com` (Louis).
 - 7.11.2026: Rechtstexte für den Launch an die App angeglichen (Prüfbericht vom 7.11.2026, PR `rechtstexte-launch`, übernimmt PR #6): Name nach außen nur mit Initial, Pflichtangaben, Statistik und Bestenlisten, Push und Glocke mit Fristen, Resend in Irland, Code eine Stunde, Wortliste, Meldungen, Feedback, Testumgebung, Hinweis zur Testphase, AGB als Fassung 1.0 mit Anhörung, § 327r BGB, Kündigung nur mit sachlichem Grund, Impressum mit § 5 DDG. Braucht nach Gesellschaftsvertrag § 7 Abs. 3 f die Zustimmung beider Gesellschafter.
 - 1.11.2026: Texte auf die neue Positionierung umgestellt, Datenschutz zu Standort und Feed nachgezogen, Instagram mit QR-Code und Fußzeilen-Link ergänzt, `build.py` lauffähig mit Python 3.9 (David, aus PR #9 im App-Repo übernommen).
