@@ -58,7 +58,7 @@ Auf dem Handy blendet die Seite die QR-Codes aus und zeigt nur Links.
 - **Stand 1.11.2026 zum Feed:** Nach jeder Runde fragt die App, ob die Runde in den Feed soll.
 
 ## Offen
-- [ ] Zum Launch: Ziel von `/app` in `vercel.json` auf den App-Store-Link stellen, "Bald im App Store" in `_quellen/build.py` ändern und das Smart App Banner in beide Startseiten setzen (siehe `README.md`).
+- [x] Zum Launch (16.11.2026): Ziel von `/app` in `vercel.json` auf den App-Store-Link stellen, "Bald im App Store" in `_quellen/build.py` ändern und das Smart App Banner in beide Startseiten setzen (siehe `README.md`).
 - [ ] Vercel-Tarif klären: Hobby ist nur für nicht kommerzielle Nutzung, sauber wäre Pro (siehe `README.md`).
 - [ ] Zugang zu Vercel für David. Im Hobby-Tarif nicht möglich, im Pro-Tarif über ein Team.
 - [x] Datenschutzerklärung ergänzen, sobald das eigene SMTP (Resend) für Anmeldecodes läuft (7.11.2026).

@@ -3,7 +3,7 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/app", "destination": "/", "permanent": false },
+    { "source": "/app", "destination": "https://apps.apple.com/de/app/id6829330820", "permanent": false },
     { "source": "/imprint", "destination": "/en/imprint", "permanent": true },
     { "source": "/privacy", "destination": "/en/privacy", "permanent": true },
     { "source": "/terms", "destination": "/en/terms", "permanent": true },

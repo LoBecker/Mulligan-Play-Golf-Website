@@ -40,13 +40,13 @@ T = {
         "legal": {"impressum": ("/impressum", "Impressum"), "datenschutz": ("/datenschutz", "Datenschutz"), "agb": ("/agb", "AGB")},
         "foot_other": ("/en", "English"),
         "foot_brand": "Mulligan · Play Golf",
-        "kicker": "Bald im App Store",
+        "kicker": "Jetzt im App Store",
         "h1": "Spiel um Punkte.<br>Lern Leute kennen.<br><em>Steig im Rang auf.</em>",
         "lead": "Mulligan macht aus jeder Runde ein Match. Du findest Mitspieler auf deinem Niveau, spielst 9 Loch und trägst deine Karte je Loch ein. Danach siehst du, wie sich Rating und Statistik entwickeln. Auf allen Golfplätzen in Deutschland, kostenlos in der App.",
-        "get_title": "Bald im App Store",
-        "get_text": "Scan den Code mit deinem iPhone. Sobald die App erscheint, führt er direkt dorthin. Für iPhone, kostenlos.",
-        "qr_alt": "QR-Code: führt zum Start der App in den App Store, bis dahin auf diese Seite",
-        "pill": "Bald im App Store",
+        "get_title": "Jetzt im App Store",
+        "get_text": "Scan den Code mit deinem iPhone, er führt direkt zur App im App Store. Für iPhone, kostenlos.",
+        "qr_alt": "QR-Code: führt zur App Mulligan im App Store",
+        "pill": "Jetzt im App Store",
         "get_note": "Für iPhone. Kostenlos, ohne Startgeld.",
         "screen": "/assets/img/screen-spiele-de.webp",
         "screen_alt": "Die Mulligan App: Tab Spiele mit Tagesleiste, Filtern und offenen Matches",
@@ -76,7 +76,7 @@ T = {
         "rating": {"label": "Mulligan Rating", "num": "1.160", "delta": "+20", "rank": "Bogey", "note": "Noch 40 Punkte bis Par"},
         "cta_kicker": "Mitmachen",
         "cta_h2": "Wir starten in <em>ganz Deutschland.</em>",
-        "cta_p": "Mulligan erscheint bald für iPhone, mit allen Golfclubs in Deutschland. Du betreibst einen Golfclub oder eine Indoor-Anlage, gibst Trainerstunden oder willst dein Produkt zeigen? Dann werde Partner und mach mit uns Events.",
+        "cta_p": "Mulligan gibt es jetzt für iPhone, mit allen Golfclubs in Deutschland. Du betreibst einen Golfclub oder eine Indoor-Anlage, gibst Trainerstunden oder willst dein Produkt zeigen? Dann werde Partner und mach mit uns Events.",
         "back": "Zur Startseite",
         "nav_partner": ("/partner", "Partner werden"),
         "cta_button": "Partner werden",
@@ -103,13 +103,13 @@ T = {
         "legal": {"impressum": ("/en/imprint", "Imprint"), "datenschutz": ("/en/privacy", "Privacy"), "agb": ("/en/terms", "Terms")},
         "foot_other": ("/", "Deutsch"),
         "foot_brand": "Mulligan · Play Golf",
-        "kicker": "Coming soon to the App Store",
+        "kicker": "Now on the App Store",
         "h1": "Play for points.<br>Meet new people.<br><em>Climb the ranks.</em>",
         "lead": "Mulligan turns every round into a match. You find players at your level, play 9 holes and enter your card hole by hole. Then you see how your rating and stats develop. On every golf course in Germany, free in the app.",
-        "get_title": "Coming soon to the App Store",
-        "get_text": "Scan the code with your iPhone. Once the app is out, it takes you straight there. For iPhone, free.",
-        "qr_alt": "QR code: leads to the app in the App Store once it launches, to this page until then",
-        "pill": "Coming soon to the App Store",
+        "get_title": "Now on the App Store",
+        "get_text": "Scan the code with your iPhone, it takes you straight to the app on the App Store. For iPhone, free.",
+        "qr_alt": "QR code: leads to the Mulligan app on the App Store",
+        "pill": "Now on the App Store",
         "get_note": "For iPhone. Free, no entry fee.",
         "screen": "/assets/img/screen-feed-en.webp",
         "screen_alt": "The Mulligan app: the Feed tab with this week's rounds and a scored round",
@@ -139,7 +139,7 @@ T = {
         "rating": {"label": "Mulligan Rating", "num": "1,160", "delta": "+20", "rank": "Bogey", "note": "40 points to Par"},
         "cta_kicker": "Get involved",
         "cta_h2": "We're starting <em>all over Germany.</em>",
-        "cta_p": "Mulligan is coming soon for iPhone, with every golf club in Germany. Do you run a golf club or an indoor facility, give lessons or want to show your product? Become a partner and host events with us.",
+        "cta_p": "Mulligan is now available for iPhone, with every golf club in Germany. Do you run a golf club or an indoor facility, give lessons or want to show your product? Become a partner and host events with us.",
         "back": "Back to home",
         "nav_partner": ("/en/partner", "Become a partner"),
         "cta_button": "Become a partner",
@@ -155,6 +155,8 @@ T = {
 }
 
 # Seitenpaare für Sprachumschalter und hreflang
+APP_STORE_ID = "6829330820"
+
 PAIRS = {
     "home": ("/", "/en"),
     "impressum": ("/impressum", "/en/imprint"),
@@ -249,6 +251,9 @@ def head(t, title, desc, path, key, noindex=False):
     de, en = PAIRS.get(key, ("/", "/en"))
     canonical = DOMAIN + (path if path != "/" else "/")
     robots = '\n<meta name="robots" content="noindex">' if noindex else ""
+    # Smart App Banner von Safari auf den Startseiten, seit dem Start im App Store (16.11.2026)
+    if key == "home" and not noindex:
+        robots += f'\n<meta name="apple-itunes-app" content="app-id={APP_STORE_ID}">'
     return f"""<!doctype html>
 <html lang="{t['lang']}">
 <head>
@@ -586,12 +591,12 @@ write("index.html", home(de))
 write("en/index.html", home(en))
 write("impressum.html", legal_page(de, "impressum", "Impressum", "impressum.html", "/impressum", "", toc=False))
 write("datenschutz.html", legal_page(de, "datenschutz", "Datenschutzerklärung", "datenschutz.html", "/datenschutz", "",
-                                      stand="Stand: 10. November 2026"))
+                                      stand="Stand: 16. November 2026"))
 write("agb.html", legal_page(de, "agb", "Allgemeine Geschäftsbedingungen", "agb.html", "/agb", "",
                               stand="Fassung 1.1 vom 13. November 2026"))
 write("en/imprint.html", legal_page(en, "impressum", "Imprint", "impressum.html", "/en/imprint", "", toc=False))
 write("en/privacy.html", legal_page(en, "datenschutz", "Privacy Policy", "privacy-en.html", "/en/privacy", "",
-                                     stand="Last updated: 10 November 2026"))
+                                     stand="Last updated: 16 November 2026"))
 write("en/terms.html", legal_page(en, "agb", "Terms of Use", "terms-en.html", "/en/terms", "",
                                    stand="Version 1.1 of 13 November 2026"))
 write("partner.html", partner(de, "de"))
