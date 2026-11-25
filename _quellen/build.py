@@ -34,7 +34,7 @@ T = {
         "switch_label": "EN",
         "switch_aria": "English version",
         "title": "Mulligan · Golf-App für Matches, Netzwerk und Statistik",
-        "desc": "Mulligan ist die Golf-App für Matchmaking, Netzwerk und Statistik: 9-Loch-Matches gegen Leute auf deinem Niveau, ein Rating, das sich nach jeder Runde bewegt, deine Statistik je Loch und alle Golfclubs in Deutschland. Kostenlos, bald im App Store.",
+        "desc": "Mulligan ist die Golf-App für Matchmaking, Netzwerk und Statistik: 9-Loch-Matches gegen Leute auf deinem Niveau, ein Rating, das sich nach jeder Runde bewegt, deine Statistik je Loch und alle Golfclubs in Deutschland. Kostenlos im App Store.",
         "skip": "Zum Inhalt springen",
         "logo_alt": "Mulligan, zur Startseite",
         "legal": {"impressum": ("/impressum", "Impressum"), "datenschutz": ("/datenschutz", "Datenschutz"), "agb": ("/agb", "AGB")},
@@ -46,7 +46,7 @@ T = {
         "get_title": "Jetzt im App Store",
         "get_text": "Scan den Code mit deinem iPhone, er führt direkt zur App im App Store. Für iPhone, kostenlos.",
         "qr_alt": "QR-Code: führt zur App Mulligan im App Store",
-        "pill": "Jetzt im App Store",
+        "pill": "Im App Store laden",
         "get_note": "Für iPhone. Kostenlos, ohne Startgeld.",
         "screen": "/assets/img/screen-spiele-de.webp",
         "screen_alt": "Die Mulligan App: Tab Spiele mit Tagesleiste, Filtern und offenen Matches",
@@ -97,7 +97,7 @@ T = {
         "switch_label": "DE",
         "switch_aria": "Deutsche Version",
         "title": "Mulligan · The golf app for matches, people and stats",
-        "desc": "Mulligan is the golf app for matchmaking, networking and stats: 9-hole matches against people at your level, a rating that moves after every round, your stats hole by hole and every golf club in Germany. Free, coming soon to the App Store.",
+        "desc": "Mulligan is the golf app for matchmaking, networking and stats: 9-hole matches against people at your level, a rating that moves after every round, your stats hole by hole and every golf club in Germany. Free on the App Store.",
         "skip": "Skip to content",
         "logo_alt": "Mulligan, back to home",
         "legal": {"impressum": ("/en/imprint", "Imprint"), "datenschutz": ("/en/privacy", "Privacy"), "agb": ("/en/terms", "Terms")},
@@ -109,7 +109,7 @@ T = {
         "get_title": "Now on the App Store",
         "get_text": "Scan the code with your iPhone, it takes you straight to the app on the App Store. For iPhone, free.",
         "qr_alt": "QR code: leads to the Mulligan app on the App Store",
-        "pill": "Now on the App Store",
+        "pill": "Download on the App Store",
         "get_note": "For iPhone. Free, no entry fee.",
         "screen": "/assets/img/screen-feed-en.webp",
         "screen_alt": "The Mulligan app: the Feed tab with this week's rounds and a scored round",
@@ -356,7 +356,7 @@ def home(t):
       <div class="get">
         <div class="qr"><img src="/assets/img/qr-app.svg" alt="{t['qr_alt']}" width="132" height="132"></div>
         <div class="get-text"><strong>{t['get_title']}</strong><p>{t['get_text']}</p></div>
-        <span class="pill">{t['pill']}</span>
+        <a class="pill" href="https://apps.apple.com/de/app/id{APP_STORE_ID}">{t['pill']}</a>
         <p class="get-note">{t['get_note']}</p>
       </div>
     </div>
