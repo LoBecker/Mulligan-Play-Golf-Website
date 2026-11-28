@@ -6,7 +6,8 @@
 <title>Impressum · Mulligan</title>
 <meta name="description" content="Impressum der Mulligan App und der Website mulligan-playgolf.com.">
 <meta name="theme-color" content="#0B1C11">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="dark light">
+<script src="/assets/theme.js"></script>
 <link rel="canonical" href="https://mulligan-playgolf.com/impressum">
 <link rel="alternate" hreflang="de" href="https://mulligan-playgolf.com/impressum">
 <link rel="alternate" hreflang="en" href="https://mulligan-playgolf.com/en/imprint">
@@ -32,10 +33,11 @@
 <a class="skip" href="#inhalt">Zum Inhalt springen</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/" aria-label="Mulligan, zur Startseite"><img src="/assets/img/logo.svg" alt="Mulligan" width="525" height="190"></a>
+    <a class="brand" href="/" aria-label="Mulligan, zur Startseite"><img class="on-dark" src="/assets/img/logo.svg" alt="Mulligan" width="525" height="190"><img class="on-light" src="/assets/img/logo-dunkel.svg" alt="Mulligan" width="525" height="190"></a>
     <nav class="head-nav" aria-label="Navigation">
       <a class="nav-link" href="/partner">Partner werden</a>
       <a class="lang" href="/en/imprint" hreflang="en" lang="en" aria-label="English version">EN</a>
+      <button class="lang theme" type="button" data-label-light="Helle Darstellung" data-label-dark="Dunkle Darstellung" aria-label="Helle Darstellung"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg></button>
     </nav>
   </div>
 </header>
@@ -112,7 +114,7 @@ Email: <a href="mailto:contact@mulligan-playgolf.com">contact@mulligan-playgolf.
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <div class="foot-brand"><img src="/assets/img/zeichen.svg" alt="" width="209" height="132"><span>Mulligan · Play Golf</span></div>
+    <div class="foot-brand"><img class="on-dark" src="/assets/img/zeichen.svg" alt="" width="209" height="132"><img class="on-light" src="/assets/img/zeichen-dunkel.svg" alt="" width="209" height="132"><span>Mulligan · Play Golf</span></div>
     <ul class="foot-links"><li><a href="/partner">Partner werden</a></li><li><a href="/impressum" aria-current="page">Impressum</a></li><li><a href="/datenschutz">Datenschutz</a></li><li><a href="/agb">AGB</a></li><li><a href="https://www.instagram.com/mulligan_playgolf/" rel="noopener">Instagram</a></li><li><a href="/en" lang="en">English</a></li></ul>
     <p class="copy">© 2026 Becker &amp; Groß GbR</p>
   </div>

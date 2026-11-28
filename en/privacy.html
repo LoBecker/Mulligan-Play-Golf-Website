@@ -6,7 +6,8 @@
 <title>Privacy Policy · Mulligan</title>
 <meta name="description" content="Privacy Policy for the Mulligan app and the website mulligan-playgolf.com.">
 <meta name="theme-color" content="#0B1C11">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="dark light">
+<script src="/assets/theme.js"></script>
 <link rel="canonical" href="https://mulligan-playgolf.com/en/privacy">
 <link rel="alternate" hreflang="de" href="https://mulligan-playgolf.com/datenschutz">
 <link rel="alternate" hreflang="en" href="https://mulligan-playgolf.com/en/privacy">
@@ -32,10 +33,11 @@
 <a class="skip" href="#inhalt">Skip to content</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="/en" aria-label="Mulligan, back to home"><img src="/assets/img/logo.svg" alt="Mulligan" width="525" height="190"></a>
+    <a class="brand" href="/en" aria-label="Mulligan, back to home"><img class="on-dark" src="/assets/img/logo.svg" alt="Mulligan" width="525" height="190"><img class="on-light" src="/assets/img/logo-dunkel.svg" alt="Mulligan" width="525" height="190"></a>
     <nav class="head-nav" aria-label="Navigation">
       <a class="nav-link" href="/en/partner">Become a partner</a>
       <a class="lang" href="/datenschutz" hreflang="de" lang="de" aria-label="Deutsche Version">DE</a>
+      <button class="lang theme" type="button" data-label-light="Light mode" data-label-dark="Dark mode" aria-label="Light mode"><svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg><svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg></button>
     </nav>
   </div>
 </header>
@@ -43,7 +45,7 @@
   <div class="wrap">
     <a class="back" href="/en">← Back to home</a>
     <h1>Privacy Policy</h1>
-    <p class="stand">Last updated: 16 November 2026</p>
+    <p class="stand">Last updated: 28 November 2026</p>
     <nav class="toc" aria-label="Contents"><p>Contents</p><ul><li><a href="#kurz">The short version</a></li><li><a href="#allgemein">A. General</a></li><li><a href="#website">B. Website</a></li><li><a href="#app">C. App</a></li><li><a href="#rechte">D. Your rights</a></li><li><a href="#aenderungen">E. Changes to this privacy policy</a></li></ul></nav>
     <div class="prose">
 <p>This privacy policy is also available in German: <a href="https://mulligan-playgolf.com/datenschutz">mulligan-playgolf.com/datenschutz</a>.</p>
@@ -138,7 +140,7 @@ Email: <a href="mailto:contact@mulligan-playgolf.com">contact@mulligan-playgolf.
 <p>This is necessary to show you the website, fend off attacks and find errors. The legal basis is Art. 6(1)(f) GDPR. Our legitimate interest is a secure and working website. We can view these logs for at most one day. Beyond that, Vercel keeps logs only as long as needed for operations and security.</p>
 
 <h3 id="website-cookies">No cookies, no tracking, no external fonts</h3>
-<p>The website sets no cookies and stores nothing in your browser. We use no analytics or advertising services. Fonts are served from our own server, so your browser does not load anything from third parties. There is no contact form.</p>
+<p>The website sets no cookies. Only if you switch between light and dark mode next to DE/EN at the top does your browser remember that choice (in local storage, entry "theme" with "light" or "dark"). The entry stays on your device and we learn nothing about it. It is strictly necessary for the display you asked for (Section 25(2) no. 2 TDDDG). You can delete it in your browser settings. We use no analytics or advertising services. Fonts are served from our own server, so your browser does not load anything from third parties. There is no contact form.</p>
 
 <h3 id="website-links">Links to other sites</h3>
 <p>The website contains links, for example to the App Store or to OpenStreetMap. You only leave our website when you tap a link. The linked site's own privacy policy then applies.</p>
@@ -368,7 +370,7 @@ Website: <a href="https://www.ldi.nrw.de">ldi.nrw.de</a>
 </main>
 <footer class="site-footer">
   <div class="wrap">
-    <div class="foot-brand"><img src="/assets/img/zeichen.svg" alt="" width="209" height="132"><span>Mulligan · Play Golf</span></div>
+    <div class="foot-brand"><img class="on-dark" src="/assets/img/zeichen.svg" alt="" width="209" height="132"><img class="on-light" src="/assets/img/zeichen-dunkel.svg" alt="" width="209" height="132"><span>Mulligan · Play Golf</span></div>
     <ul class="foot-links"><li><a href="/en/partner">Become a partner</a></li><li><a href="/en/imprint">Imprint</a></li><li><a href="/en/privacy" aria-current="page">Privacy</a></li><li><a href="/en/terms">Terms</a></li><li><a href="https://www.instagram.com/mulligan_playgolf/" rel="noopener">Instagram</a></li><li><a href="/" lang="de">Deutsch</a></li></ul>
     <p class="copy">© 2026 Becker &amp; Groß GbR</p>
   </div>

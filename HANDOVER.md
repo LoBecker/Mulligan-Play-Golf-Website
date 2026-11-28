@@ -67,6 +67,7 @@ Auf dem Handy blendet die Seite die QR-Codes aus und zeigt nur Links.
 - [ ] Geplante Wortmarke: In `docs/recht/checkliste-gbr.md` im App-Repo steht "Mulligan: Play Golf". Die Markenrecherche steht noch aus.
 
 ## Verlauf
+- 28.11.2026: Hell und Dunkel (Entscheidung David). Ohne Wahl folgt die Seite dem Gerät, der runde Knopf neben DE/EN schaltet um und merkt sich die Wahl im Browser (localStorage "theme", `assets/theme.js`). Dafür CSP `script-src 'self'` statt `'none'`. Hell im Stil der Instagram-Videos, Farben als Variablen am Anfang und Ende von `assets/site.css`, Logos in Tinte (`*-dunkel.svg`). Datenschutz Abschnitt "Keine Cookies" in beiden Sprachen angepasst, Stand 28.11.2026 (David).
 - 25.11.2026: Auf dem Handy ist der Knopf unter dem Hero jetzt ein echter Link zur App im App Store (vorher nur Text, Antippen tat nichts). Beschriftung "Im App Store laden" / "Download on the App Store". Beschreibung für Suchmaschinen und Teilen-Vorschau sagt nicht mehr "bald im App Store" (David).
 - 13.11.2026: Prüfung neuer Fotos vor dem Veröffentlichen (App Store Richtlinie 1.2, Entscheidung der Gründer): Datenschutz `#app-fotopruefung` mit Zweck, Rechtsgrundlagen und Fristen, Resend auch für den Hinweis auf wartende Fotos, ersetzte Fotos spätestens am nächsten Tag gelöscht. AGB § 8 Abs. 4 und § 11 Werkzeuge. AGB-Fassung bleibt 1.0, Entscheidung der Gründer offen.
 - 24.10.2026: Seite angelegt, Rechtstexte auf die Becker & Groß GbR umgestellt, Kontakt `contact@mulligan-playgolf.com` (Louis).

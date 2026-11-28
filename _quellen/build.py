@@ -33,6 +33,8 @@ T = {
         "other_home": "/en",
         "switch_label": "EN",
         "switch_aria": "English version",
+        "theme_light": "Helle Darstellung",
+        "theme_dark": "Dunkle Darstellung",
         "title": "Mulligan · Golf-App für Matches, Netzwerk und Statistik",
         "desc": "Mulligan ist die Golf-App für Matchmaking, Netzwerk und Statistik: 9-Loch-Matches gegen Leute auf deinem Niveau, ein Rating, das sich nach jeder Runde bewegt, deine Statistik je Loch und alle Golfclubs in Deutschland. Kostenlos im App Store.",
         "skip": "Zum Inhalt springen",
@@ -96,6 +98,8 @@ T = {
         "other_home": "/",
         "switch_label": "DE",
         "switch_aria": "Deutsche Version",
+        "theme_light": "Light mode",
+        "theme_dark": "Dark mode",
         "title": "Mulligan · The golf app for matches, people and stats",
         "desc": "Mulligan is the golf app for matchmaking, networking and stats: 9-hole matches against people at your level, a rating that moves after every round, your stats hole by hole and every golf club in Germany. Free on the App Store.",
         "skip": "Skip to content",
@@ -156,6 +160,15 @@ T = {
 
 # Seitenpaare für Sprachumschalter und hreflang
 APP_STORE_ID = "6829330820"
+
+# Sonne (schaltet auf Hell) und Mond (schaltet auf Dunkel) für den Knopf neben DE/EN, sichtbar je nach Modus
+THEME_ICONS = (
+    '<svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
+    'stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2'
+    'M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></svg>'
+    '<svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" '
+    'stroke-linejoin="round" aria-hidden="true"><path d="M20.5 14.6A8.5 8.5 0 0 1 9.4 3.5a8.5 8.5 0 1 0 11.1 11.1z"/></svg>'
+)
 
 PAIRS = {
     "home": ("/", "/en"),
@@ -262,7 +275,8 @@ def head(t, title, desc, path, key, noindex=False):
 <title>{title}</title>
 <meta name="description" content="{html.escape(desc, quote=True)}">{robots}
 <meta name="theme-color" content="#0B1C11">
-<meta name="color-scheme" content="dark">
+<meta name="color-scheme" content="dark light">
+<script src="/assets/theme.js"></script>
 <link rel="canonical" href="{canonical}">
 <link rel="alternate" hreflang="de" href="{DOMAIN}{de}">
 <link rel="alternate" hreflang="en" href="{DOMAIN}{en}">
@@ -294,10 +308,11 @@ def header(t, key):
 <a class="skip" href="#inhalt">{t['skip']}</a>
 <header class="site-header">
   <div class="wrap">
-    <a class="brand" href="{t['home']}" aria-label="{t['logo_alt']}"><img src="/assets/img/logo.svg" alt="Mulligan" width="525" height="190"></a>
+    <a class="brand" href="{t['home']}" aria-label="{t['logo_alt']}"><img class="on-dark" src="/assets/img/logo.svg" alt="Mulligan" width="525" height="190"><img class="on-light" src="/assets/img/logo-dunkel.svg" alt="Mulligan" width="525" height="190"></a>
     <nav class="head-nav" aria-label="Navigation">
       <a class="nav-link" href="{t['nav_partner'][0]}"{' aria-current="page"' if key == 'partner' else ''}>{t['nav_partner'][1]}</a>
       <a class="lang" href="{other}" hreflang="{'en' if t['lang'] == 'de' else 'de'}" lang="{'en' if t['lang'] == 'de' else 'de'}" aria-label="{t['switch_aria']}">{t['switch_label']}</a>
+      <button class="lang theme" type="button" data-label-light="{t['theme_light']}" data-label-dark="{t['theme_dark']}" aria-label="{t['theme_light']}">{THEME_ICONS}</button>
     </nav>
   </div>
 </header>
@@ -318,7 +333,7 @@ def footer(t, current=None):
     links.append(f'<li><a href="{oh}" lang="{"en" if t["lang"] == "de" else "de"}">{ol}</a></li>')
     return f"""<footer class="site-footer">
   <div class="wrap">
-    <div class="foot-brand"><img src="/assets/img/zeichen.svg" alt="" width="209" height="132"><span>{t['foot_brand']}</span></div>
+    <div class="foot-brand"><img class="on-dark" src="/assets/img/zeichen.svg" alt="" width="209" height="132"><img class="on-light" src="/assets/img/zeichen-dunkel.svg" alt="" width="209" height="132"><span>{t['foot_brand']}</span></div>
     <ul class="foot-links">{''.join(links)}</ul>
     <p class="copy">© {YEAR} {OWNER}</p>
   </div>
@@ -391,7 +406,7 @@ def home(t):
         {''.join(chat)}
       </div>
       <div class="rating">
-        <div class="rating-label"><img src="/assets/img/zeichen-khaki.svg" alt="" width="209" height="132">{r['label']}</div>
+        <div class="rating-label"><img class="on-dark" src="/assets/img/zeichen-khaki.svg" alt="" width="209" height="132"><img class="on-light" src="/assets/img/zeichen-khaki-dunkel.svg" alt="" width="209" height="132">{r['label']}</div>
         <div class="rating-row"><div><span class="rating-num">{r['num']}</span><span class="badge">{r['delta']}</span></div><span class="rating-rank">{r['rank']}</span></div>
         <div class="bar"><span></span></div>
         <p class="rating-note">{r['note']}</p>
@@ -591,12 +606,12 @@ write("index.html", home(de))
 write("en/index.html", home(en))
 write("impressum.html", legal_page(de, "impressum", "Impressum", "impressum.html", "/impressum", "", toc=False))
 write("datenschutz.html", legal_page(de, "datenschutz", "Datenschutzerklärung", "datenschutz.html", "/datenschutz", "",
-                                      stand="Stand: 16. November 2026"))
+                                      stand="Stand: 28. November 2026"))
 write("agb.html", legal_page(de, "agb", "Allgemeine Geschäftsbedingungen", "agb.html", "/agb", "",
                               stand="Fassung 1.1 vom 13. November 2026"))
 write("en/imprint.html", legal_page(en, "impressum", "Imprint", "impressum.html", "/en/imprint", "", toc=False))
 write("en/privacy.html", legal_page(en, "datenschutz", "Privacy Policy", "privacy-en.html", "/en/privacy", "",
-                                     stand="Last updated: 16 November 2026"))
+                                     stand="Last updated: 28 November 2026"))
 write("en/terms.html", legal_page(en, "agb", "Terms of Use", "terms-en.html", "/en/terms", "",
                                    stand="Version 1.1 of 13 November 2026"))
 write("partner.html", partner(de, "de"))
